@@ -1,0 +1,102 @@
+@import 'bulma/bulma';
+@import '../scss//loading//loading.scss';
+@import '../scss//newsfeed/feedblock.scss';
+
+$button-transition-timing: 0.25s;
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F4F4F4;
+    .navbar {
+      background-color: #F4F4F4;
+    }
+    z-index: 0;
+    a,h2,p {
+      width: 100;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+    
+
+    .button-arrow {
+      .arrow-icon {
+        overflow: visible;
+        color: white;
+        width: 8px;
+        margin-right: 5px;
+      }
+      .arrow-head {
+        transition: all $button-transition-timing ease-in-out;
+
+      }
+      .arrow-body {
+        transition: all $button-transition-timing ease-in-out;
+        opacity: 0;
+        transform: scaleX(1);
+      }
+      &:hover {
+        .arrow-head {
+          transform: translateX(3px);
+        }
+        .arrow-body {
+         opacity: 1;
+          transform: scaleX(2);
+        }
+      }
+
+    }
+}
+
+
+
+
+.light-mode {
+    background-color: #F4F4F4;
+    color: #333;
+    transition: background-color 0.3s ease;
+    .column {
+      article {
+        background-color: whitesmoke;
+      }
+    }
+    .navbar {
+      background-color: #F4F4F4;
+    }
+  }
+.dark-mode {
+    background-color: #1a1919;
+    color:whitesmoke;
+    .column {
+      article {
+        background-color: purple;
+      }
+      h2 {
+        color: white;
+      }
+     
+     
+    }
+     .hero.is-fullheight.is-primary.is-bold {
+          background-image: none;
+          background-color: black;
+
+        }
+     .navbar {
+      background-color: #1a1919;
+      a {
+        color: white;
+      }
+      a:hover {
+        background-color: purple;
+      }
+      a.is-light {
+        color:black
+      }
+    } 
+      
+   
+  }
